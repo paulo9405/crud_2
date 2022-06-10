@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <ul>
+      {% for pessoa in pessoas %}
+      <a href="{% url 'update_pessoa' pessoa.id %}">
+              <li>{{ pessoa.nome }}</li>
+              <li>{{ pessoa.endereco }}</li>
+              <li>{{ pessoa.telefone }}</li>
+          {% endfor %}
+      </a>
+
+      <a href="{% url 'nova_pessoa' %}">nova pessoa</a>
+
+</body>
+</html>
